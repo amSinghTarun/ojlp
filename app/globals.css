@@ -1,0 +1,375 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 30% 98%;
+    --foreground: 20 14.3% 4.1%;
+
+    --card: 40 30% 98%;
+    --card-foreground: 20 14.3% 4.1%;
+
+    --popover: 40 30% 98%;
+    --popover-foreground: 20 14.3% 4.1%;
+
+    --primary: 350 47.4% 35.3%;
+    --primary-foreground: 355 100% 97.3%;
+
+    --secondary: 42 87% 55%;
+    --secondary-foreground: 24 9.8% 10%;
+
+    --muted: 40 8% 90%;
+    --muted-foreground: 25 5.3% 44.7%;
+
+    --accent: 42 87% 55%;
+    --accent-foreground: 24 9.8% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 350 47.4% 35.3%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 20 14.3% 10%;
+    --foreground: 60 9.1% 97.8%;
+
+    --card: 20 14.3% 10%;
+    --card-foreground: 60 9.1% 97.8%;
+
+    --popover: 20 14.3% 10%;
+    --popover-foreground: 60 9.1% 97.8%;
+
+    --primary: 350 47.4% 35.3%;
+    --primary-foreground: 355 100% 97.3%;
+
+    --secondary: 42 87% 55%;
+    --secondary-foreground: 24 9.8% 10%;
+
+    --muted: 12 6.5% 15.1%;
+    --muted-foreground: 24 5.4% 63.9%;
+
+    --accent: 42 87% 55%;
+    --accent-foreground: 24 9.8% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 12 6.5% 15.1%;
+    --input: 12 6.5% 15.1%;
+    --ring: 350 47.4% 35.3%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Custom serif font for headings */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+}
+
+/* Elegant background with subtle gradient */
+.elegant-bg {
+  background-color: hsl(var(--background));
+  background-image: linear-gradient(
+    to bottom right,
+    hsl(var(--background)) 0%,
+    hsl(var(--background)) 60%,
+    hsl(42, 30%, 95%) 100%
+  );
+  background-attachment: fixed;
+}
+
+/* Decorative divider */
+.decorative-divider {
+  position: relative;
+  height: 1px;
+  background-color: hsl(var(--border));
+  margin: 2rem 0;
+}
+
+.decorative-divider::before {
+  content: "§";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(var(--background));
+  padding: 0 1rem;
+  color: hsl(var(--primary));
+  font-family: "Playfair Display", serif;
+}
+
+/* Fancy first letter (drop cap) */
+.drop-cap:first-letter {
+  float: left;
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  line-height: 0.8;
+  padding-top: 0.1em;
+  padding-right: 0.1em;
+  color: hsl(var(--primary));
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* Staggered animation for children */
+.stagger-children > * {
+  opacity: 0;
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+.stagger-children > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.stagger-children > *:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.stagger-children > *:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.stagger-children > *:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.stagger-children > *:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.stagger-children > *:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+/* Scroll reveal animation */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card hover effects */
+.law-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid hsl(var(--border));
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.law-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Ornamental corners for cards */
+.ornamental-corners {
+  position: relative;
+}
+
+.ornamental-corners::before,
+.ornamental-corners::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-color: hsl(var(--primary));
+  z-index: 1;
+}
+
+.ornamental-corners::before {
+  top: 10px;
+  left: 10px;
+  border-top: 2px solid;
+  border-left: 2px solid;
+}
+
+.ornamental-corners::after {
+  bottom: 10px;
+  right: 10px;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+}
+
+/* Seal effect */
+.seal {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-color: hsl(var(--primary));
+  border-radius: 50%;
+  color: hsl(var(--primary-foreground));
+  display: flex;
+  align-items: center;
+}
+
+/* Carousel animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.carousel-slide-active {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.carousel-slide-inactive {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+/* Enhance hover effects for carousel navigation */
+.carousel-nav-button {
+  opacity: 0.7;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-nav-button:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Article content image styling */
+.prose img {
+  border-radius: 0.375rem;
+  margin: 2rem auto;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.article-preview img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.375rem;
+  margin: 1rem 0;
+}
+
+/* Image caption styling */
+.prose img + em {
+  display: block;
+  text-align: center;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  margin-top: -1.5rem;
+  margin-bottom: 2rem;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+  animation-play-state: running;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Dark mode elegant background */
+.dark .elegant-bg {
+  background-image: linear-gradient(
+    to bottom right,
+    hsl(var(--background)) 0%,
+    hsl(var(--background)) 60%,
+    hsl(20, 14%, 15%) 100%
+  );
+}
+
+/* Subtle paper texture for cards */
+.paper-texture {
+  background-color: hsl(var(--card));
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Refined card styling */
+.refined-card {
+  border-radius: var(--radius);
+  border: 1px solid hsl(var(--border));
+  background-color: hsl(var(--card));
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.refined-card:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: translateY(-2px);
+}
