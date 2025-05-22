@@ -38,7 +38,7 @@ export default function JournalsPage({ searchParams }: { searchParams: { view?: 
         <main className="flex-1">
           <div className="container px-4 py-12 md:px-6">
             <div className="mb-8 animate-slide-up">
-              <DecorativeHeading level={1}>LegalInsight Journal</DecorativeHeading>
+              <DecorativeHeading level={1}>Open Journal of Law & Policy Journal</DecorativeHeading>
               <p className="text-muted-foreground text-center max-w-2xl mx-auto">
                 Scholarly articles and analysis on constitutional law and legal developments.
               </p>

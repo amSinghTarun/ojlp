@@ -1,0 +1,11 @@
+{
+  "/board-of-advisors/page": "app/board-of-advisors/page.js",
+  "/blogs/page": "app/blogs/page.js",
+  "/editorial-board/page": "app/editorial-board/page.js",
+  "/page": "app/page.js",
+  "/notifications/page": "app/notifications/page.js",
+  "/submit/page": "app/submit/page.js",
+  "/journals/archive/page": "app/journals/archive/page.js",
+  "/journals/call-for-papers/page": "app/journals/call-for-papers/page.js",
+  "/journals/page": "app/journals/page.js"
+}

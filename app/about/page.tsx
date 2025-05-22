@@ -13,7 +13,7 @@ export default function AboutPage() {
       <main className="flex-1">
         <div className="container px-4 py-12 md:px-6">
           <div className="mb-8 animate-slide-up">
-            <DecorativeHeading level={1}>About LegalInsight</DecorativeHeading>
+            <DecorativeHeading level={1}>About Open Journal of Law & Policy</DecorativeHeading>
             <p className="text-muted-foreground text-center max-w-2xl mx-auto">
               Dedicated to advancing legal scholarship and constitutional understanding.
             </p>
@@ -25,7 +25,7 @@ export default function AboutPage() {
                 <div className="relative aspect-video overflow-hidden rounded-lg ornamental-corners">
                   <Image
                     src="/placeholder.svg?height=600&width=800"
-                    alt="LegalInsight headquarters"
+                    alt="Open Journal of Law & Policy headquarters"
                     fill
                     className="object-cover"
                   />
@@ -33,7 +33,7 @@ export default function AboutPage() {
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold tracking-tight font-serif">Our Mission</h2>
                   <p className="text-muted-foreground">
-                    Founded in 2010, LegalInsight is dedicated to providing thoughtful analysis and commentary on
+                    Founded in 2010, Open Journal of Law & Policy is dedicated to providing thoughtful analysis and commentary on
                     constitutional law, legal developments, and judicial decisions. Our mission is to bridge the gap
                     between academic legal scholarship and public understanding, making complex legal concepts
                     accessible to a broader audience while maintaining intellectual rigor.
@@ -73,7 +73,7 @@ export default function AboutPage() {
                 <div className="relative aspect-video overflow-hidden rounded-lg ornamental-corners md:order-first">
                   <Image
                     src="/placeholder.svg?height=600&width=800"
-                    alt="LegalInsight team meeting"
+                    alt="Open Journal of Law & Policy team meeting"
                     fill
                     className="object-cover"
                   />
@@ -86,7 +86,7 @@ export default function AboutPage() {
                 <h2 className="text-2xl font-bold tracking-tight font-serif text-center">Our Publications</h2>
                 <div className="grid gap-6 md:grid-cols-2">
                   <div className="border rounded-lg p-6 space-y-4">
-                    <h3 className="text-xl font-bold font-serif">LegalInsight Journal</h3>
+                    <h3 className="text-xl font-bold font-serif">Open Journal of Law & Policy Journal</h3>
                     <p className="text-muted-foreground">
                       Our flagship academic publication featuring in-depth analysis of constitutional law, judicial
                       decisions, and legal theory. Published quarterly, the journal maintains rigorous academic
@@ -95,7 +95,7 @@ export default function AboutPage() {
                     </p>
                   </div>
                   <div className="border rounded-lg p-6 space-y-4">
-                    <h3 className="text-xl font-bold font-serif">LegalInsight Blog</h3>
+                    <h3 className="text-xl font-bold font-serif">Open Journal of Law & Policy Blog</h3>
                     <p className="text-muted-foreground">
                       Our blog provides timely commentary on current legal developments, emerging trends, and
                       significant court decisions. Updated weekly, it offers concise analysis for those seeking to stay

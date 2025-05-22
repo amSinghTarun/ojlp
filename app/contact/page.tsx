@@ -4,9 +4,9 @@ import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Briefcase } from "luc
 import { ContactForm } from "@/components/contact-form"
 
 export const metadata: Metadata = {
-  title: "Contact Us | LegalInsight",
+  title: "Contact Us | Open Journal of Law & Policy",
   description:
-    "Get in touch with the LegalInsight team for submissions, reviews, media inquiries, or career opportunities.",
+    "Get in touch with the Open Journal of Law & Policy team for submissions, reviews, media inquiries, or career opportunities.",
 }
 
 export default function ContactPage() {

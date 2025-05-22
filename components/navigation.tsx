@@ -90,12 +90,12 @@ export function Navigation() {
           <div className="w-9 h-9 relative">
             <Image
               src="/logo.png"
-              alt="Open Journal of Law & Policy Logo"
+              alt="Open Journal of Law & Policy"
               fill
               className="object-contain transition-transform duration-200 group-hover:scale-105"
             />
           </div>
-          <div className="font-heading font-semibold text-lg tracking-tight">Journal of Legal Scholarship</div>
+          <div className="font-heading font-semibold text-lg tracking-tight">Open Journal of Law & Policy</div>
         </Link>
 
         <div className="flex items-center space-x-4 lg:space-x-6">

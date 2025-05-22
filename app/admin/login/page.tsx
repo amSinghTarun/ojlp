@@ -10,7 +10,7 @@ export default function LoginPage() {
             <div className="rounded-full bg-primary p-2 text-primary-foreground">
               <Scale className="h-6 w-6" />
             </div>
-            <h1 className="text-2xl font-bold">LegalInsight</h1>
+            <h1 className="text-2xl font-bold">Open Journal of Law & Policy</h1>
           </div>
           <h2 className="text-2xl font-bold">Admin Login</h2>
           <p className="text-sm text-muted-foreground">Enter your credentials to access the admin panel</p>

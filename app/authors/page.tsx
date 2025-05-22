@@ -19,7 +19,7 @@ export default function AuthorsPage() {
           <div className="mb-8 animate-slide-up">
             <DecorativeHeading level={1}>Our Authors</DecorativeHeading>
             <p className="text-muted-foreground text-center max-w-2xl mx-auto">
-              Meet the legal experts and scholars who contribute to LegalInsight.
+              Meet the legal experts and scholars who contribute to Open Journal of Law & Policy.
             </p>
           </div>
 

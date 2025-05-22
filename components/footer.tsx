@@ -96,7 +96,7 @@ export function Footer() {
         <Separator className="bg-border/50" />
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <p>© {currentYear} Journal of Legal Scholarship. All rights reserved.</p>
+          <p>© {currentYear} Open Journal of Law & Policy. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <Link href="/terms-of-service" className="hover:text-primary transition-colors duration-200">
               Terms
