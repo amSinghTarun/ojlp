@@ -1,13 +1,13 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Spectral, Libre_Baskerville } from "next/font/google"
+import { EB_Garamond, Libre_Baskerville } from "next/font/google"
 import "./globals.css"
 import { Footer } from "@/components/footer"
 import { Navigation } from "@/components/navigation"
 import { constructMetadata } from "@/lib/metadata"
 
 // Main body font - Spectral is an elegant serif font with excellent readability
-const spectral = Spectral({
+const spectral = EB_Garamond({
   subsets: ["latin"],
   variable: "--font-serif",
   display: "swap",
@@ -15,7 +15,7 @@ const spectral = Spectral({
 })
 
 // Heading font - Libre Baskerville is a classic serif font with modern proportions
-const libreBaskerville = Libre_Baskerville({
+const libreBaskerville = EB_Garamond({
   subsets: ["latin"],
   variable: "--font-heading",
   display: "swap",
@@ -38,9 +38,9 @@ export default function RootLayout({
       <body
         className={`${spectral.variable} ${libreBaskerville.variable} font-serif bg-background flex flex-col min-h-screen antialiased`}
       >
-        <Navigation />
+        {/* <Navigation /> */}
         <main className="flex-1">{children}</main>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   )
