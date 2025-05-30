@@ -19,7 +19,7 @@ export default function Home() {
   const latestIssueArticles = getArticlesByIssue(latestIssue.volume, latestIssue.issue)
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col min-h-screen mb-10">
       <main className="flex-1">
         <section className="container px-4 pt-10 pb-5 md:px-6">
           {/* <ScrollReveal threshold={0.2} delay={200}> */}
