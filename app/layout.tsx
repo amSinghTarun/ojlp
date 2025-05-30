@@ -36,7 +36,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/logo.png" />
       </head>
       <body
-        className={`${spectral.variable} ${libreBaskerville.variable} font-serif bg-background flex flex-col min-h-screen antialiased`}
+        className={`${spectral.variable} ${libreBaskerville.variable} font-serif bg-background mb-10 flex flex-col min-h-screen antialiased`}
       >
         {/* <Navigation /> */}
         <main className="flex-1">{children}</main>
