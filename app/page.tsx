@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen mb-10">
-      <main className="flex-1 ">
+      <main className="flex flex-col mb-10 ">
         <section className="container px-4 pt-10 pb-5 md:px-6">
           {/* <ScrollReveal threshold={0.2} delay={200}> */}
             <div className="">
@@ -40,7 +40,7 @@ export default function Home() {
         </section>
 
         {/* Journal Description Section */}
-        <section className="container px-4 pb-10">
+        <section className="container px-4 mb-10">
           <ScrollReveal threshold={0.2} delay={300}>
             <div className="max-w-4xl mx-auto">
               <div className=" p-8 rounded-lg shadow-sm border border-gray-200">
