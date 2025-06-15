@@ -9,7 +9,7 @@ import { constructMetadata } from "@/lib/metadata"
 // Main body font - Spectral is an elegant serif font with excellent readability
 const spectral = Spectral({
   subsets: ["latin"],
-  variable: "--font-serif",
+  variable: "--font-sans",
   display: "swap",
   weight: ["400", "500", "600", "700"],
 })
@@ -36,7 +36,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/logo.png" />
       </head>
       <body
-        className={`${spectral.variable} ${libreBaskerville.variable} font-serif bg-background flex flex-col min-h-screen antialiased`}
+        className={`${spectral.variable} ${libreBaskerville.variable} bg-background flex flex-col min-h-screen antialiased`}
       >
         <Navigation />
         <main className="flex-1">{children}</main>

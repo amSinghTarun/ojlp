@@ -227,8 +227,7 @@ export function JournalCitation({ article }: JournalCitationProps) {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="sm" className="flex items-center gap-1">
-          <Quote className="h-4 w-4" />
-          <span className="hidden md:inline-block">Cite</span>
+          <span className=" md:inline-block">CITE</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-[350px] max-w-[90vw] max-h-[80vh] overflow-y-auto">

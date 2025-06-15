@@ -32,7 +32,7 @@
     --input: 20 5.9% 90%;
     --ring: 355 65% 30%;
 
-    --radius: 0.5rem;
+    --radius: 0.2rem;
   }
 
   .dark {
@@ -223,7 +223,6 @@
 /* Modern card styling with subtle border */
 .law-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid hsl(var(--border));
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   border-radius: var(--radius);
   overflow: hidden;

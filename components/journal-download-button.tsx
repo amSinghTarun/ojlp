@@ -281,8 +281,7 @@ export function JournalDownloadButton({ article }: JournalDownloadButtonProps) {
           onClick={() => handleDownloadClick("pdf")}
           className="flex items-center gap-1"
         >
-          <FileDown className="h-4 w-4" />
-          <span className="hidden sm:inline-block">Download PDF</span>
+          <span className=" sm:inline-block">DOWNLOAD</span>
         </Button>
       </div>
 

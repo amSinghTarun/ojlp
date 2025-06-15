@@ -24,7 +24,7 @@ export default function NotificationsPage() {
       <main className="flex-1">
         <div className="container px-4 py-12 md:px-6">
           <div className="mb-8 animate-slide-up">
-            <DecorativeHeading level={1}>Notifications</DecorativeHeading>
+            <DecorativeHeading >Notifications</DecorativeHeading>
             <p className="text-muted-foreground text-center max-w-2xl mx-auto">
               Stay updated with the latest events, calls for papers, and announcements.
             </p>
@@ -49,8 +49,7 @@ export default function NotificationsPage() {
                         <NotificationCard
                           key={notification.id}
                           notification={notification}
-                          index={index}
-                          unread={!notification.read}
+                          index={1}
                         />
                       ))}
                     </div>

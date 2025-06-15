@@ -36,18 +36,18 @@ export default function Home() {
           <ArticleCarousel articles={carouselArticles} issueInfo={issueInfo} />
         </section>
 
-        <div className="z-30 text-center py-2 px-4 text-sm text-primary bg-muted font-medium">Latest Issue: {issueInfo}</div>
+        {/* <div className="z-30 text-center py-2 px-4 text-sm text-primary bg-muted font-medium">Latest Issue: {issueInfo}</div> */}
 
         <NotificationTicker />
 
-        <section className="container px-4 py-12 md:px-6">
+        <section className="container px-4 pb-12 md:px-6">
           {/* Recent Content Section */}
           <ScrollReveal threshold={0.2} delay={200}>
             <div className="mb-12">
               <div className="flex items-center justify-between mb-4">
-                <DecorativeHeading>Recent Content</DecorativeHeading>
-                <div className="flex space-x-4">
-                  <Link href="/journals" className="text-primary hover:underline flex items-center group">
+                <DecorativeHeading>Recent </DecorativeHeading>
+                {/* <div className="flex space-x-4">
+                  <Link href="/journals" className="text-neutral-700 hover:underline flex items-center group">
                     All Journals
                     <ArrowRight className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
@@ -55,9 +55,9 @@ export default function Home() {
                     All Blogs
                     <ArrowRight className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
-                </div>
+                </div> */}
               </div>
-              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 stagger-children">
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 stagger-children">
                 {articles.slice(0, 6).map((article, index) => (
                   <ArticleCard key={article.slug} article={article} index={index} />
                 ))}

@@ -31,8 +31,8 @@ export function NotificationTicker() {
   const notification = unreadHighPriorityNotifications[currentIndex]
 
   return (
-    <div className="bg-primary py-4 border-y border-primary/20 relative overflow-hidden">
-      <div className="container px-4 relative">
+    <div className=" relative overflow-hidden px-5 py-10">
+      <div className="py-4 bg-red-900 container px-4 rounded-lg relative">
         <div className="flex items-center justify-between gap-4">
           <div className="flex items-center text-sm flex-1 overflow-hidden">
             <div className="bg-white/20 p-2 text-white font-bold rounded-full mr-4 flex-shrink-0">IN FOCUS</div>

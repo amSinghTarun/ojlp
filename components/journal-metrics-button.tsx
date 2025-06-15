@@ -26,9 +26,9 @@ export function JournalMetricsButton({ article }: JournalMetricsButtonProps) {
     <DropdownMenu open={open} onOpenChange={setOpen}>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="sm" className="flex items-center gap-1">
-          <BarChart3 className="h-4 w-4" />
-          <span className="hidden md:inline-block">Metrics</span>
-          {open ? <ChevronUp className="h-4 w-4 ml-1" /> : <ChevronDown className="h-4 w-4 ml-1" />}
+          {/* <BarChart3 className="h-4 w-4" /> */}
+          <span className="md:inline-block">METRICES</span>
+          {/* {open ? <ChevronUp className="h-4 w-4 ml-1" /> : <ChevronDown className="h-4 w-4 ml-1" />} */}
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-[300px] md:w-[350px]">

@@ -81,34 +81,14 @@ export function NotificationCard({
   return (
     <Card
       className={cn(
-        "overflow-hidden transition-all duration-300 hover:shadow-md",
-        priorityClasses[notification.priority],
-        unread && "ring-1 ring-primary",
+        "overflow-hidden transition-all duration-300 hover:shadow-md"
       )}
       style={{ animationDelay: `${index * 0.1}s` }}
     >
-      {notification.image && (
-        <div className="relative h-40 w-full overflow-hidden">
-          <div className="absolute inset-0 bg-muted/20 flex items-center justify-center">
-            {/* Fallback content while image loads */}
-            <Bell className="h-8 w-8 text-muted-foreground/40" />
-          </div>
-          <Image
-            src={notification.image || "/placeholder.svg"}
-            alt={notification.title}
-            fill
-            className="object-cover"
-            onError={handleImageError}
-          />
-        </div>
-      )}
       <CardHeader className="p-4">
-        <div className="flex justify-between items-start gap-2">
-          <CardTitle className="text-lg font-bold">{notification.title}</CardTitle>
-          <Badge variant="outline" className="whitespace-nowrap">
-            {getNotificationIcon(notification.type)}
-            <span className="ml-1">{getNotificationTypeName(notification.type)}</span>
-          </Badge>
+        <div className="flex flex-col justify-between items-start space-y-4">
+          <span className="text-sm text-muted-foreground">{getNotificationTypeName(notification.type)}</span> 
+          <CardTitle className="text-lg text-red-800 font-bold">{notification.title}</CardTitle>
         </div>
       </CardHeader>
       <CardContent className="p-4 pt-0 space-y-4">
